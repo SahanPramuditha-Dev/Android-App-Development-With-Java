@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:id="@+id/tvContactTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Contact Info"
+            android:textColor="@color/primary"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- Profile Image Section -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivContactProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:padding="3dp"
+                android:src="@drawable/profile_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/tvContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sahan Pramuditha"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivContactProfile" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardContactInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:layout_constraintTop_toBottomOf="@id/tvContactName">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="contact.sahanpramuditha@gmail.com"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:paddingVertical="16dp"
+                        android:drawableStart="@android:drawable/ic_dialog_email"
+                        android:drawablePadding="16dp"
+                        app:drawableTint="@color/primary" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+94 76 415 8980"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:paddingVertical="16dp"
+                        android:drawableStart="@android:drawable/ic_menu_call"
+                        android:drawablePadding="16dp"
+                        app:drawableTint="@color/primary" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                    <TextView
+                        android:id="@+id/tvGitHub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SahanPramuditha-Dev"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:paddingVertical="16dp"
+                        android:drawableStart="@android:drawable/ic_menu_view"
+                        android:drawablePadding="16dp"
+                        app:drawableTint="@color/primary" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
+
+                    <TextView
+                        android:id="@+id/tvPortfolio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sahanpramuditha.me"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:paddingVertical="16dp"
+                        android:drawableStart="@android:drawable/ic_menu_myplaces"
+                        android:drawablePadding="16dp"
+                        app:drawableTint="@color/primary" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShareContact"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:text="Share Contact"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_share"
+                app:iconGravity="textStart"
+                app:layout_constraintTop_toBottomOf="@id/cardContactInfo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
