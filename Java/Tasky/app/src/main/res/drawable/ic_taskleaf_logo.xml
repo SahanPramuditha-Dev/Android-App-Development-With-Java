@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Deepest Glow Bloom -->
+    <path
+        android:fillColor="#03FFFFFF"
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+    <path
+        android:fillColor="#05FFFFFF"
+        android:pathData="M50,50m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
+    <path
+        android:fillColor="#08FFFFFF"
+        android:pathData="M50,50m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0" />
+    <path
+        android:fillColor="#0CFFFFFF"
+        android:pathData="M50,50m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0" />
+    <path
+        android:fillColor="#12FFFFFF"
+        android:pathData="M50,50m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+
+    <!-- Inner Core Circle (The 'Leaf' container) -->
+    <path
+        android:fillColor="#25FFFFFF"
+        android:pathData="M50,50m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0" />
+
+    <!-- Subtle Leaf Detail (Vein/Arc) -->
+    <path
+        android:strokeColor="#30FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeLineCap="round"
+        android:pathData="M38,58 C42,65 58,65 62,58" />
+
+    <path
+        android:strokeColor="#30FFFFFF"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:pathData="M50,35 C55,40 55,60 50,65" />
+
+    <!-- Elegant Checkmark -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M41,51 L47,57 L59,43" />
+
+</vector>
